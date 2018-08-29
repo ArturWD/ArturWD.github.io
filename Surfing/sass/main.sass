@@ -1,0 +1,360 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $gray
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.button
+	display: inline-block
+	font-size: 16px
+	line-height: 32px
+	padding: 10px 50px
+	border: 1px solid black
+	transition: all 200ms ease-in-out
+	font-weight: bold
+	position: relative
+	top: 0
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0)
+	&:hover
+		top: -2px
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.28)
+	&:focus
+		top: 0
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0)
+.button-light
+	border-color: $gray
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+section
+	margin-bottom: 150px
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+
+img
+	width: 50px
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+a
+	color: black
+	&:hover
+		text-decoration: none
+		color: black
+
+//HEADER
+nav
+	width: 100%
+	margin-top: 100px
+	padding: 0 15px
+	@media (max-width: 768px)
+		margin-top: 40px
+.menu
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	li:not(.logo)
+		margin-left: 50px
+		@media (max-width: 450px)
+			margin-left: 15px
+	a
+		transition: all 200ms ease-in
+		color: $gray
+		font-size: 15px
+		text-transform: uppercase
+		&:hover
+			color: black
+	.active
+		a
+			color: black
+	
+.logo
+	margin-right: auto
+	width: 35px
+	height: auto
+.welcome
+	width: 100%
+	text-align: center
+	margin: 190px 0
+	color: black
+	@media (max-width: 768px)
+		margin: 100px 0
+	.h1
+		font-family: 'Playfair Display', serif
+		font-size: 70px
+		font-weight: normal
+		text-align: center
+		@media (max-width: 768px)
+			font-size: 50px
+	.h3
+		font-family: $default-font
+		font-size: 16px
+		color: $gray
+		text-align: center
+		max-width: 70%
+		margin: 0 auto
+		font-weight: normal
+
+
+// reviews
+@media (max-width: 992px)
+	.first 
+		order: -1 !important
+.s-reviews
+	.reviews-header
+		font-size: 36px;
+		color: rgb(0,0,0);
+		font-family: "Playfair Display"
+		font-weight: normal
+		margin-bottom: 20px
+
+	.review
+		margin-bottom: 50px
+	.review-text
+		font-style: italic
+		position: relative
+		&:before
+			content: ',,'
+			position: absolute
+			display: block
+			left: -10px
+			top: 80px
+			line-height: 0
+			z-index: -1
+			font-size: 130px
+			font-family: "Playfair Display"
+			letter-spacing: -10px
+			transform: rotate(180deg)
+			color: rgba(0, 0, 0, 0.15)
+	.review-name
+		color: black
+		left: 20px
+		position: relative
+		font-weight: bold
+		&:before
+			content: ''
+			display: block
+			height: 2px
+			width: 8px
+			background-color: black
+			position: relative
+			left: -20px
+			top: 13px
+
+.video
+	margin-bottom: 20px
+	position: relative
+
+	.preview
+		display: block
+		position: relative
+		img
+			width: 100%
+			height: auto
+		&:after
+			z-index: 3
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			transition: all 200ms ease-in
+			background-color: rgba(0, 0, 0, 0.08)
+	.video-play-btn
+		display: block
+		z-index: 4
+		box-sizing: border-box
+		position: absolute
+		width: 55px
+		height: 55px
+		top: auto
+		left: 20px
+		bottom: 20px
+		background-color: white
+		padding: 20px
+		border-radius: 50%
+		cursor: pointer
+		
+			
+		img
+			padding: 0
+			margin: 0
+			position: relative
+			top: 10%
+			left: 50%
+			width: 10px
+			transform: translate(-50%, -50%)
+	.video-play-btn:hover ~ .preview:after
+		background-color: rgba(0, 0, 0, 0.31)
+
+
+//instructors
+.instructors-heading
+	font-weight: normal
+	font-size: 50px
+	color: black
+	font-family: "Playfair Display"
+	text-align: center
+	margin-bottom: 80px
+	@media (max-width: 576px)
+		font-size: 40px
+.instructors
+	display: flex
+	justify-content: space-around
+	@media (max-width: 768px)
+		justify-content: space-between
+	@media (max-width: 576px)
+		flex-direction: column
+		align-items: center
+.instructor
+	text-align: center
+	width: 27%
+	@media (max-width: 768px)
+		width: 32%
+	@media (max-width: 576px)
+		margin-bottom: 30px
+		width: 80%
+	&-avatar
+		padding-bottom: 120%
+	&-name
+		margin-top: 20px
+		font-family: "Playfair Display"
+		font-size: 30px
+		font-weight: normal
+		color: black
+		line-height: 1.2
+		@media (max-width: 992px)
+			font-size: 24px
+	&-students
+		color: rgb(42,183,56)
+		font-size: 15px
+
+
+
+// BLOG
+.blog
+	margin-bottom: 180px
+	@media (max-width: 768px)
+		margin-bottom: 60px
+	
+.blog-text .button
+	margin-top: 20px
+.blog-align
+	display: flex
+	align-items: center
+.blogs-heading
+	font-weight: normal
+	font-size: 50px
+	color: black
+	font-family: "Playfair Display"
+	text-align: center
+	margin-bottom: 80px
+	@media (max-width: 576px)
+		font-size: 40px
+
+.blog-img
+	padding-bottom: 67%
+	@media (max-width: 768px)
+		margin-bottom: 20px
+.blog-header
+	font-size: 40px
+	color: black
+	font-family: "Playfair Display"
+	font-style: italic
+	font-weight: normal
+
+.blog-content
+	font-size: 16px
+	letter-spacing: 0px
+	line-height: 31px
+	color: rgb(68,68,68)
+.blog-left
+	.blog-text
+		margin-left: 50px
+		@media (max-width: 992px)
+			margin-left: 0
+.blog-right
+	.blog-text
+		margin-right: 50px
+		@media (max-width: 992px)
+			margin-right: 0
+
+// ENROLL
+.s-enroll
+	text-align: center
+.enroll-header
+	font-weight: normal
+	font-size: 50px
+	color: black
+	font-family: "Playfair Display"
+	text-align: center
+	margin-bottom: 60px
+	@media (max-width: 768px)
+		font-size: 40px
+	@media (max-width: 576px)
+		font-size: 30px
+
+
+// FOOTER
+footer
+	padding-bottom: 40px
+	.h3
+		color: black
+		font-size: 24px
+		margin: 0
+	.copyright
+		font-size: 13px
+
+
+
+.popup 
+	box-sizing: padding-box
+	position: relative
+	margin: 0 auto
+	width: 95%
+	max-width: 800px
+.popup-video
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	padding-top: 55%
+	
+
+
+
+
+
+@import "media" // Always at the end
