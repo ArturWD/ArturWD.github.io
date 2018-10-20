@@ -1,0 +1,70 @@
+.container
+	padding: 0
+
+  
+.section-main-info
+	position: relative
+.section-main-info .container
+	border-radius: 3px
+	border: 1px solid rgba(0, 0, 0, 0.1)
+	box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.32)
+	margin-top: 30px
+
+
+// ABOUT US
+.about-us
+	background-color: #f8f8f8
+	padding: 10px 30px
+	height: 100%
+	.description
+		color: $accent
+		font-weight: bold
+	.more, .email
+		color: darken($orange, 20)
+		font-weight: bold
+	ul
+		padding: 0
+
+	li
+		list-style: none
+		
+	a
+		color: $text
+	.key-points li
+		margin-top: 15px
+		&:hover a
+			color: $accent
+
+
+//CAROUSEL
+.carousel-item 
+	height: 300px
+	overflow: hidden
+	width: 100%
+	background-size: cover
+    position: relative
+
+
+@media (max-width: 768px)
+	.small-first
+		order: -1
+
+.carousel-control-next, .carousel-control-prev
+	font-size: 30px
+
+.carousel-caption
+	position: absolute
+	top: auto
+	bottom: 70px
+	left: 0
+.carousel-caption a
+    font-size: 22px 
+    font-weight: bold
+    line-height: 1.2
+    position: absolute
+    top: 0
+    left: 0
+    text-align: left   
+    color: white
+    padding: 8px 10px 8px 40px
+    background-color: rgba($accent, .7)

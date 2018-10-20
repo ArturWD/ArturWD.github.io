@@ -1,0 +1,154 @@
+.container
+	padding: 0
+.header
+	color: $orange
+.header-top
+	background-color: $accent
+	padding: 10px 0
+.sub-header
+	font-size: 18px
+.main-header
+	font-size: 24px
+	text-transform: uppercase
+	margin-top: -10px
+.search-form
+	border-radius: 7px
+	overflow: hidden
+	margin-top: 15px
+	display: flex
+	.search-field
+		min-width: 18px
+		flex-grow: 1
+		flex-shrink: 10
+		outline: none
+		border: none
+		padding: 3px 8px
+	.search-btn
+		flex-shrink: 0
+		min-width: 18px
+		background-color: #fff
+		outline: none
+		border: none
+		cursor: pointer
+		color: $accent
+		&:hover
+			color: darken($accent, 5)
+			
+.logo
+	width: 100px
+	height: auto
+.log-in
+	display: flex
+	justify-content: space-between
+	align-items: center
+	font-size: 14px
+
+	.log-in-btn
+		display: inline-block
+		background-color: #7cc61e
+		padding: 3px 9px
+		border-radius: 6px
+		color: black
+		font-weight: bold
+		&:hover
+			background-color: lighten(#7cc61e, 10)
+		&:active
+			transform: translateY(1px)
+
+
+
+// bootstrap navbar for desctops
+.logo-mobile
+	width: 50px
+	height: auto
+	display: none
+.search-form-mobile
+	display: none
+	margin-bottom: 7px
+.log-in-mobile
+	display: none
+.navbar-toggler:focus
+	outline: none
+.navbar
+	font-size: 18px
+	padding: 15px 0
+.nav-container
+	border-bottom: 1px solid rgba($accent, .2)
+.nav-home
+	font-size: 25px
+	color: $accent
+.navbar-nav
+	display: flex
+	align-items: center
+.navbar-light .navbar-nav .show>.nav-link
+	color: $accent
+.nav-item
+	margin-right: 20px
+.navbar-light .navbar-nav .active>.nav-link
+	color: $accent
+.navbar-light .navbar-nav .nav-link:hover
+	color: $accent
+.dropdown-item:focus, .dropdown-item:hover
+	background-color: rgba($accent, .1)
+
+
+// mobile header
+
+@media (max-width: 768px)
+	.header-top
+		display: none
+	.logo-mobile
+		display: block
+	.log-in-mobile
+		display: block
+		margin-top: 20px
+		.sign-in
+			margin-right: 20px
+	.search-form-mobile
+		display: flex
+	.nav-container
+		border-bottom: none
+	.main-menu
+		background-color: $accent
+		padding: 5px 0
+	.navbar-light .navbar-toggler
+		border-color: black
+		background-color: lighten($accent, 3)
+	.nav-home
+		font-size: 25px
+		color: white
+	.navbar-nav
+		display: flex
+		align-items: center
+	.navbar-light .navbar-nav .show>.nav-link
+		color: white
+	.nav-item
+		margin-right: 20px
+	.navbar-light .navbar-nav .active>.nav-link
+		color: white
+
+	.navbar-light .navbar-nav .nav-link:hover
+		color: white
+
+	.dropdown-item:focus, .dropdown-item:hover
+		background-color: rgba(white, .1)
+
+	.navbar-light .navbar-nav .nav-link
+		color: white
+
+	.nav-item
+		margin-left: 20px
+		width: 100%
+		border-top: 1px solid lighten($accent, 4)
+
+	.dropdown-menu 
+		background-color: transparent
+		width: 100%
+		border: none
+		.dropdown-item
+			color: white
+
+
+@media (max-width: 576px)
+	.navbar
+		padding: 0 15px

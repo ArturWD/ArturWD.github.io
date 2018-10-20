@@ -1,0 +1,53 @@
+.carousel-container
+    padding: 0 35px
+.section-services 
+    .services-carousel
+        .item
+            display: flex
+            text-align: center
+            justify-content: center
+            align-items: center
+            height: 210px
+            padding: 20px
+        .service
+            padding: 30px 30px
+            font-weight: bold
+            font-size: 30px
+            text-transform: uppercase
+            color: $accent
+            &:hover
+                color: $accent
+    .owl-nav
+        font-size: 60px
+        color: #9d9d9d
+        position: absolute
+        top: 10%
+        transform: translateY(-50%)
+        left: 0
+        right: 0
+    .owl-prev
+        position: absolute
+        left: -40px
+        &:focus
+            outline: none
+    .owl-next
+        position: absolute
+        right: -40px
+        &:focus
+            outline: none
+    .owl-theme .owl-nav [class*=owl-]:hover
+        background-color: transparent
+        color: #525252
+    
+    
+@media (max-width: 680px)
+    .section-services
+        .owl-nav
+            font-size: 80px
+            top: 15%
+        .owl-prev
+            left: -35px
+
+        .owl-next
+            right: -35px
+
