@@ -1,55 +1,33 @@
 .section-services
 	background: linear-gradient(to bottom right, rgba($maingreen, .02), rgba($yellow, .08))
-	.service-container
+	.services-container
 		display: flex
-		padding: 30px 0
+		flex-wrap: wrap
+		justify-content: space-around
+		margin: 20px 0
 
-	.service-container.right
-		justify-content: flex-end
-	
 	.service
-		overflow: hidden
-		border-radius: 7px
-		max-width: 800px
-		box-shadow: 5px 10px 25px rgba($maingreen, 0.4)
-
-	.service-header
-		display: block
-		width: 100%
-		padding: 15px 25px
-		background-color: $lightgreen
-	
-	.service-content
+		text-align: center
 		display: flex
-	.service-description
-		flex: 1
+		flex-direction: column
+		align-items: center
+		flex-grow: 1
 		flex-basis: 300px
-		margin-right: 20px
-		padding: 20px 15px
-	.service-img
-		flex: 9999
+		max-width: 500px
+		margin: 30px 0
+		padding: 0 20px
 
-	.service-button
+	.button
 		margin-top: 20px
-		display: inline-block
-		
+	.service-name
+		margin-bottom: 5px
+		margin-top: 30px
+		font-weight: 400
+		color: darken($text-color, 20)
 
-@media (max-width: 1000px)
-	.section-services
-		.service-container
-			justify-content: center
-		.service-container.right
-			justify-content: center
+	.service-icon
+		width: 100px
 
-@media (max-width: 640px)
-	.section-services
-		.service-img
-			display: none
-		.service-description
-			margin-right: 0
-			display: flex
-			flex-direction: column
-		.service
-			box-shadow: 0px 10px 25px rgba($maingreen, 0.4)
-		.service-button
-			align-self: center
+	.service-description
+		font-weight: 300
+        
